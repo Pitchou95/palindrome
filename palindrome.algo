@@ -1,0 +1,16 @@
+FUNCTION palindrome(word: STRING) : BOOLEAN
+VAR
+    i: INTEGER = 0
+    j: INTEGER = Length(word) -1
+BEGIN
+    WHILE (i <= j) DO
+        IF (word[i] != word[j]) THEN
+            RETURN false
+        ELSE
+            i := i + 1
+            j := j - 1
+        END_IF
+    END_WHILE
+    Write ("The word is a palindrome.")
+    RETURN true
+END
